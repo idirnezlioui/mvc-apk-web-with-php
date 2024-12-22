@@ -3,7 +3,7 @@
         <a class="nav-link active" aria-current="page" href="#">Active</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../pages/liste_arms.php">listes arms</a>
+        <a class="nav-link" href="../pages/liste_personnes.php">listes arms</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
