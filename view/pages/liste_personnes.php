@@ -2,15 +2,21 @@
 
 <head>
     <?php
-    include "../includs/head.php"
+    include "../view/includs/head.php"
     ?>
 </head>
+<nav>
+    <?php
+    include "../view/includs/nav.php"
+    ?>
+</nav>
 
 <body>
-    <h1>Liste des armes</h1>
+    <h1>Liste des personnes</h1>
     <table class="table">
         <thead>
             <tr>
+                <th></th>
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col">age</th>
@@ -19,18 +25,18 @@
         </thead>
         <tbody>
             <?php
-            foreach ($personnes as $personnes) { ?>
+            foreach ($perselect as $personne) { ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td><?php echo $personnes->getid() ?></td>
-                    <td><?php echo $personnes->getnom() ?></td>
-                    <td><?php echo $personnes->getgetage() ?></td>
-                    <td><?php echo $personnes->getidarms() ?></td>
+                    <td></td>
+                    <td><?php echo $personne->getid() ?></td>
+                    <td><?php echo $personne->getnom() ?></td>
+                    <td><?php echo $personne->getage() ?></td>
+                    <td><?php echo $personne->getidarms() ?></td>
+                    <td><i class="fa-solid fa-pen-to-square"></i></td>
+                    <td><i class="fa-solid fa-trash"></i></td>
+                    
                 </tr>
             <?php } ?>
-
-
-
         </tbody>
     </table>
 

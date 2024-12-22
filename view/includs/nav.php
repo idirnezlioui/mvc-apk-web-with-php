@@ -1,12 +1,12 @@
 <ul class="nav justify-content-center">
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link active" aria-current="page" href="../controleur/ctrl_acceuil.php">Acceuil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../pages/liste_personnes.php">listes arms</a>
+        <a class="nav-link" href="../controleur/ctrl_listpersonnes.php">listes des armes</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">listes des armes</a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>

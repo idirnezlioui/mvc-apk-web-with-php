@@ -4,7 +4,9 @@ class Personne
     private int $id;
     private string $nom;
     private int $age;
-    private int $id_arms;
+    private int $arm_id;
+
+    
 
     //les function qui permette de retourne les infos de la personne 
     function getid()
@@ -21,6 +23,6 @@ class Personne
     }
     function getidarms()
     {
-        return $this->id_arms;
+        return $this->arm_id;
     }
 }

@@ -1,44 +1,40 @@
 <?php
-$bdd_name = 'tp_arms';
-$user_name = 'root';
-$mdps = '';
+$bdd_name = 'tp_arms'; // Nom de la base de données
+$user_name = 'root'; // Nom d'utilisateur
+$mdps = ''; // Mot de passe
 
-//realise une fonction qui permet d'etablire une connexion a n'import qu'elle bdd
+// Fonction pour établir une connexion à une base de données
 function connexionBD($dbname)
 {
-    // les parametre global
+    // Les paramètres globaux
     global $user_name;
     global $mdps;
     $sgbd = "mysql";
     $host = "localhost";
-    $charast = "utf8";
+    $charset = "utf8"; // Correction : charset au lieu de charasted
 
-    // declare le data osurce name 
-    $dns = $sgbd . ':host=' . $host . ';dbnme=' . $dbname . ';charasted=' . $charast;
-    //connecte l'utilisateur a la bd
-    $username = $user_name;
-    $password = $mdps;
+    // Construire le Data Source Name (DSN)
+    $dns = $sgbd . ':host=' . $host . ';dbname=' . $dbname . ';charset=' . $charset;
 
-    //pour des erreure plus claire 
-    $erreur = array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    // Gestion des erreurs PDO
+    $options = array(
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Activer les exceptions pour les erreurs PDO
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC // Mode de récupération par défaut
     );
-    //decalares les exception en cas d'erreur de connexion 
-
+    // Essayer d'établir la connexion
     try {
-        //si tous se passe bien la connexion est etablie 
-        $bdd = new PDO($dns, $username, $password, $erreur);
-        echo ("connexion etablie avec succe");
+        $bdd = new PDO($dns, $user_name, $mdps, $options);
+        return $bdd; // Retourne l'objet PDO en cas de succès
     } catch (PDOException $e) {
-        echo ("connexion echoue " . $e->getMessage());
+        // Retourne null et affiche un message en cas d'échec
+        echo "Connexion échouée : " . $e->getMessage();
         return null;
     }
 }
 
-// declare une fonction dans le role est de de faire appelle connexionBD et a l'utilise a chaque moment
+// Fonction pour utiliser la connexion sans spécifier à chaque fois le nom de la base
 function connexion()
 {
-    global $nam_bdd;
-    $bdd = connexionBD($nam_bdd);
-    return $bdd;
+    global $bdd_name; // Correction : utiliser $bdd_name correctement
+    return connexionBD($bdd_name);
 }

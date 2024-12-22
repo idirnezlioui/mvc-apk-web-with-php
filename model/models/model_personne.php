@@ -12,7 +12,7 @@ function selectpersonnes($pdo)
     //recuperation du resutas dans un tableau d'objet  avec fetchclass
     // le nom de la classe vas etre passe en parametre comme ça il vas detecte les methode de la classe et il vas les charger 
 
-    $stm->setFetchMode(PDO::FETCH_CLASS, "Peronne");
+    $stm->setFetchMode(PDO::FETCH_CLASS, "Personne");
     // recuper  le resultas dans un tableau d'objet 
     return $stm->fetchAll();
 }

@@ -1,13 +1,13 @@
 <html lang="en">
 <head>
     <?php
-        include "../includs/head.php"
+        include "../view/includs/head.php"
     ?>
 </head>
 <body>
     <nav>
         <?php
-            include "../includs/nav.php"
+        include "../view/includs/nav.php"
         ?>
     </nav>
     
