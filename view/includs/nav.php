@@ -9,6 +9,7 @@
         <a class="nav-link" href="../controleur/ctrl_listarms.php">listes des armes</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <a  href="../controleur/ctrl_connexion.php"><button type="button" class="btn btn-primary " >Connexion</button></a>
+    
     </li>
 </ul>

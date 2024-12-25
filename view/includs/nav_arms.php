@@ -6,7 +6,7 @@
         <a class="nav-link" href="../controleur/ctrl_listpersonnes.php">Modification</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../controleur/ctrl_listarms.php">Info sur l'arme</a>
+        <a class="nav-link" href="#">Info sur l'arme</a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
