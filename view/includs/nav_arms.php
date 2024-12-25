@@ -3,10 +3,10 @@
         <a class="nav-link active" aria-current="page" href="../controleur/ctrl_acceuil.php">Acceuil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../controleur/ctrl_listpersonnes.php">listes des personnes</a>
+        <a class="nav-link" href="../controleur/ctrl_listpersonnes.php">Modification</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="../controleur/ctrl_listarms.php">listes des armes</a>
+        <a class="nav-link" href="../controleur/ctrl_listarms.php">Info sur l'arme</a>
     </li>
     <li class="nav-item">
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
